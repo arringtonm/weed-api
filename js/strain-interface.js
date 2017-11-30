@@ -20,10 +20,10 @@ $(document).ready(function() {
       $("#strain-result").empty();
       $("#strain-result").append("<h3>No results found, man</h3>");
     });
-
-
-
   });
+
+// "race" form
+
   $("#race-form").submit(function(event){
     event.preventDefault();
     $("#race-result").append("<p>Don't forget to breath....</p>");
@@ -43,4 +43,30 @@ $(document).ready(function() {
       $("#race-result").append("<h3>No results found, man</h3>");
     });
   });
+
+// effects form
+
+  $("#effects-form").submit(function(event){
+    event.preventDefault();
+    $("#effects-result").append("<p>Don't forget to breath....</p>");
+    let type = $("input:checked").val();
+    // console.log("test");
+    console.log(type);
+    let link = `http://strainapi.evanbusse.com/${strainApiKey}/strains/search/effect/${type}`;
+    console.log(link);
+    $.get(`http://strainapi.evanbusse.com/${strainApiKey}/strains/search/effect/${type}`)
+    .then(function(response){
+      $("#effects-result").empty();
+      for (var i = 0; i < response.length; i++) {
+        // let output = response[i].name;
+        let id = response[i].id;
+        $("#effects-result").append(`<p><a href="http://strainapi.evanbusse.com/${strainApiKey}/strains/data/desc/${id}">${response[i].name}</a></p>`);
+      }
+    }).fail(function(error){
+      $("#effects-result").empty();
+      $("#effects-result").append("<h3>No results found, man</h3>");
+    });
+  });
+
+
 });

@@ -20,7 +20,9 @@ button {
   padding: 5px;
   font-size: 14px;
   border-radius: 5px;
-  border: 1px solid #420; }
+  border: 1px solid #420;
+  background-color: darkgreen;
+  color: white; }
 
 input[type="radio"] {
   margin-right: 10px; }
