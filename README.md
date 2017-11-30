@@ -16,6 +16,9 @@ To use locally, clone from repository and run following steps at command line:
 
 ` gulp serve `
 
+Request an API key from 
+
+
 ### Known Bugs
 
 Multi-word effects don't interface properly with API.

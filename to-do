@@ -1,0 +1,27 @@
+relatively "easy":
+
+-- fix description/linking appearance
+    make it appear below or somewhere else instead of new window (toggle, for instance)
+
+
+-- add links/clickability to strain names
+    copy/paste/modify text from other sections
+
+
+
+medium:
+
+-- redo layout to be pretty/portfolio ready
+    conceptualize layout
+    build pieces with clickthrough divs or whatever
+
+-- api calls in back end
+    build method
+
+
+harder:
+
+-- switch functionality of effects to checkbox (compare multiple calls against each other with arrays/loops)
+    change html and associated code to checkboxes from radio
+    make api call and array for each checked box
+    compare contents of each array and return common items

@@ -4,15 +4,26 @@
   box-sizing: border-box; }
 
 body {
-  background-color: #00FF00; }
+  background-color: white;
+  justify-content: center;
+  display: flex;
+  flex-direction: column; }
 
 #main {
   display: flex;
   flex-direction: row;
-  min-width: 100vw;
   justify-content: center;
   font-family: sans-serif;
-  font-weight: 300; }
+  font-weight: 300;
+  min-width: 100%;
+  border-bottom: 1px solid #420;
+  background-color: #00FF00; }
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #420;
+  margin-bottom: 10px; }
 
 button {
   font-family: sans-serif;
@@ -28,12 +39,25 @@ input[type="radio"] {
   margin-right: 10px; }
 
 .col {
+  margin: 20px;
+  border-radius: 5px;
   padding: 50px;
   display: flex;
   flex-direction: column;
-  width: 33vw; }
+  flex-grow: 1; }
 
 .radio-group {
   margin-bottom: 10px; }
+
+#last-col {
+  display: flex;
+  flex-direction: row; }
+
+.mini-col {
+  min-width: 30%;
+  flex-direction: column; }
+
+.desc {
+  font-size: 13px; }
 
 /*# sourceMappingURL=master.css.map */
