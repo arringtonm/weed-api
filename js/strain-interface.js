@@ -11,7 +11,7 @@ $(document).ready(function() {
     .then(function(response){
       $("#result").empty();
       for (var i = 0; i < response.length; i++) {
-        $("#result").append(`<p><a href="http://strainapi.evanbusse.com/${strainApiKey}/strains/data/desc/${response[i].id}">${response[i].name}</a></p><div class="desc">${response[i].desc}</div>`);
+        $("#result").append(`<div class="list-item"><a href="http://strainapi.evanbusse.com/${strainApiKey}/strains/data/desc/${response[i].id}">${response[i].name}</a><div class="desc">${response[i].desc}</div>`);
       }
     }).fail(function(error) {
       $("#result").empty();
@@ -30,7 +30,7 @@ $(document).ready(function() {
       $("#result").empty();
       for (var i = 0; i < response.length; i++) {
         let id = response[i].id;
-        $("#result").append(`<p><a href="http://strainapi.evanbusse.com/${strainApiKey}/strains/data/desc/${id}">${response[i].name}</a></p>`);
+        $("#result").append(`<div class="list-item"><a href="http://strainapi.evanbusse.com/${strainApiKey}/strains/data/desc/${id}">${response[i].name}</a></div>`);
       }
     }).fail(function(error){
       $("#result").empty();
@@ -42,15 +42,15 @@ $(document).ready(function() {
 
   $("#effects-form").submit(function(event){
     event.preventDefault();
-    $("#effects-result").append("<p>Don't forget to breath....</p>");
+    $("#result").append("<p>Don't forget to breath....</p>");
     let type = $(".effects:checked").val();
     let link = `http://strainapi.evanbusse.com/${strainApiKey}/strains/search/effect/${type}`;
     $.get(`http://strainapi.evanbusse.com/${strainApiKey}/strains/search/effect/${type}`)
     .then(function(response){
-      $("#effects-result").empty();
+      $("#result").empty();
       for (var i = 0; i < response.length; i++) {
         let id = response[i].id;
-        $("#result").append(`<p><a href="http://strainapi.evanbusse.com/${strainApiKey}/strains/data/desc/${id}">${response[i].name}</a></p>`);
+        $("#result").append(`<div class="list-item"><a href="http://strainapi.evanbusse.com/${strainApiKey}/strains/data/desc/${id}">${response[i].name}</a></div>`);
       }
     }).fail(function(error){
       $("#result").empty();

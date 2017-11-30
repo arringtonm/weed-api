@@ -1,75 +1,93 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <script src="build/js/vendor.min.js"></script>
-  <script type="text/javascript" src="build/js/app.js"></script>
-  <link rel="stylesheet" href="css/master.css">
-  <title>Strain Lookup</title>
-</head>
-<body>
-  <div id="main">
-    <div id="name" class="col">
-      <form id="strain-form">
-        <label for="strain-type">Strain Name</label>
-        <input id="strain-type" type="text">
-        <button type="submit">Submit, man</button>
-      </form>
-      <form id="race-form">
+  <head>
+    <script src="build/js/vendor.min.js"></script>
+    <script type="text/javascript" src="build/js/app.js"></script>
+    <link rel="stylesheet" href="css/master.css">
+    <title>Strain Lookup</title>
+  </head>
+  <body>
+    <div id="main">
+      <div class="main-inner">
+        <div id="name" class="col">
+          <span class="search-text">Search by name:</span>
         <div class="radio-group">
-        <input type="radio" name="race" class="race" value="indica">Indica<br>
-        <input type="radio" name="race" class="race" value="sativa">Sativa<br>
-        <input type="radio" name="race" class="race" value="hybrid">Hybrid<br>
+          <form id="strain-form">
+            <input id="strain-type" type="text"><br>
+          </div>
+            <button type="submit">Submit, man</button>
+          </form>
+        </div>
+        <div class="col">
+          <form id="race-form">
+            <span class="search-text">Search by plant "race:"</span>
+            <div class="radio-group">
+              <input type="radio" name="race" class="race" value="indica">Indica<br>
+              <input type="radio" name="race" class="race" value="sativa">Sativa<br>
+              <input type="radio" name="race" class="race" value="hybrid">Hybrid<br>
+            </div>
+            <button type="submit">Submit, dood!</button>
+          </form>
+        </div>
+        <div id="effects" class="col">
+          <form id="effects-form">
+            <span class="search-text">Search by effects:</span>
+            <div class="radio-group" id="last-col">
+              <div class="mini-col">
+                <input type="radio" name="effects" class="effects" value="anxious">Anxious<br>
+                <input type="radio" name="effects" class="effects" value="aroused">Aroused<br>
+                <input type="radio" name="effects" class="effects" value="cramps">Cramps<br>
+                <input type="radio" name="effects" class="effects" value="creative">Creative<br>
+              </div>
+              <div class="mini-col">
+                <input type="radio" name="effects" class="effects" value="depression">Depression<br>
+                <input type="radio" name="effects" class="effects" value="dizzy">Dizzy<br>
+                <input type="radio" name="effects" class="effects" value="dry eyes">Dry Eyes<br>
+                <input type="radio" name="effects" class="effects" value="dry mouth">Dry Mouth<br>
+              </div>
+              <div class="mini-col">
+                <input type="radio" name="effects" class="effects" value="energetic">Energetic<br>
+                <input type="radio" name="effects" class="effects" value="eye pressure">Eye pressure<br>
+                <input type="radio" name="effects" class="effects" value="euphoric">Euphoric<br>
+                <input type="radio" name="effects" class="effects" value="fatigue">Fatigue<br>
+              </div>
+              <div class="mini-col">
+                <input type="radio" name="effects" class="effects" value="focused">Focused<br>
+                <input type="radio" name="effects" class="effects" value="giggly">Giggly<br>
+                <input type="radio" name="effects" class="effects" value="happy">Happy<br>
+                <input type="radio" name="effects" class="effects" value="headache">Headache<br>
+              </div>
+              <div class="mini-col">
+                <input type="radio" name="effects" class="effects" value="headaches">Headaches<br>
+                <input type="radio" name="effects" class="effects" value="hungry">Hungry<br>
+                <input type="radio" name="effects" class="effects" value="inflammation">Inflammation<br>
+                <input type="radio" name="effects" class="effects" value="insomnia">Insomnia<br>
+              </div>
+              <div class="mini-col">
+                <input type="radio" name="effects" class="effects" value="muscle spasms">Muscle Spasms<br>
+                <input type="radio" name="effects" class="effects" value="nausea">Nausea<br>
+                <input type="radio" name="effects" class="effects" value="pain">Pain<br>
+                <input type="radio" name="effects" class="effects" value="paranoid">Paranoid<br>
+              </div>
+              <div class="mini-col">
+                <input type="radio" name="effects" class="effects" value="relaxed">Relaxed<br>
+                <input type="radio" name="effects" class="effects" value="seizures">Seizures<br>
+                <input type="radio" name="effects" class="effects" value="sleepy">Sleepy<br>
+                <input type="radio" name="effects" class="effects" value="spasticity">Spasticity<br>
+              </div>
+              <div class="mini-col">
+                <input type="radio" name="effects" class="effects" value="stress">Stress<br>
+                <input type="radio" name="effects" class="effects" value="talkative">Talkative<br>
+                <input type="radio" name="effects" class="effects" value="tingly">Tingly<br>
+                <input type="radio" name="effects" class="effects" value="uplifted">Uplifted<br>
+              </div>
+            </div>
+            <button type="submit">Submit, dood!</button>
+          </form>
+        </div>
       </div>
-        <button type="submit">Submit, dood!</button>
-      </form>
     </div>
-    <div id="effects" class="col">
-      <form id="effects-form">
-        <div class="radio-group" id="last-col">
-          <div class="mini-col">
-        <input type="radio" name="effects" class="effects" value="relaxed">Relaxed<br>
-        <input type="radio" name="effects" class="effects" value="dizzy">Dizzy<br>
-        <input type="radio" name="effects" class="effects" value="hungry">Hungry<br>
-        <input type="radio" name="effects" class="effects" value="euphoric">Euphoric<br>
-        <input type="radio" name="effects" class="effects" value="happy">Happy<br>
-        <input type="radio" name="effects" class="effects" value="depression">Depression<br>
-        <input type="radio" name="effects" class="effects" value="insomnia">Insomnia<br>
-        <input type="radio" name="effects" class="effects" value="pain">Pain<br>
-        <input type="radio" name="effects" class="effects" value="stress">Stress<br>
-        <input type="radio" name="effects" class="effects" value="cramps">Cramps<br>
-        <input type="radio" name="effects" class="effects" value="muscle spasms">Muscle Spasms<br>
-      </div>
-      <div class="mini-col">
-        <input type="radio" name="effects" class="effects" value="creative">Creative<br>
-        <input type="radio" name="effects" class="effects" value="energetic">Energetic<br>
-        <input type="radio" name="effects" class="effects" value="talkative">Talkative<br>
-        <input type="radio" name="effects" class="effects" value="nausea">Nausea<br>
-        <input type="radio" name="effects" class="effects" value="dry mouth">Dry Mouth<br>
-        <input type="radio" name="effects" class="effects" value="headache">Headache<br>
-        <input type="radio" name="effects" class="effects" value="uplifted">Uplifted<br>
-        <input type="radio" name="effects" class="effects" value="tingly">Tingly<br>
-        <input type="radio" name="effects" class="effects" value="paranoid">Paranoid<br>
-        <input type="radio" name="effects" class="effects" value="sleepy">Sleepy<br>
-        <input type="radio" name="effects" class="effects" value="fatigue">Fatigue<br>
-      </div>
-      <div class="mini-col">
-        <input type="radio" name="effects" class="effects" value="headaches">Headaches<br>
-        <input type="radio" name="effects" class="effects" value="dry eyes">Dry eyes<br>
-        <input type="radio" name="effects" class="effects" value="focused">Focused<br>
-        <input type="radio" name="effects" class="effects" value="eye pressure">Eye pressure<br>
-        <input type="radio" name="effects" class="effects" value="anxious">Anxious<br>
-        <input type="radio" name="effects" class="effects" value="giggly">Giggly<br>
-        <input type="radio" name="effects" class="effects" value="aroused">Aroused<br>
-        <input type="radio" name="effects" class="effects" value="inflammation">Inflammation<br>
-        <input type="radio" name="effects" class="effects" value="spasticity">Spasticity<br>
-        <input type="radio" name="effects" class="effects" value="seizures">Seizures<br>
-      </div>
-      </div>
-        <button type="submit">Submit, dood!</button>
-      </form>
+    <div id="result">
     </div>
-  </div>
-  <div id="result">
-  </div>
-</body>
+  </body>
 </html>
