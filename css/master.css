@@ -3,4 +3,35 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  background-color: #00FF00; }
+
+#main {
+  display: flex;
+  flex-direction: row;
+  min-width: 100vw;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: 300; }
+
+button {
+  font-family: sans-serif;
+  font-weight: 300;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #420; }
+
+input[type="radio"] {
+  margin-right: 10px; }
+
+.col {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 33vw; }
+
+.radio-group {
+  margin-bottom: 10px; }
+
 /*# sourceMappingURL=master.css.map */

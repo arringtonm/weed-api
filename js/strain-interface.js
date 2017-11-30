@@ -19,7 +19,28 @@ $(document).ready(function() {
     }).fail(function(error) {
       $("#strain-result").empty();
       $("#strain-result").append("<h3>No results found, man</h3>");
-      alert("bummer")
+    });
+
+
+
+  });
+  $("#race-form").submit(function(event){
+    event.preventDefault();
+    $("#race-result").append("<p>Don't forget to breath....</p>");
+    let type = $("input:checked").val();
+    // console.log("test");
+    // console.log(type);
+    $.get(`http://strainapi.evanbusse.com/${strainApiKey}/strains/search/race/${type}`)
+    .then(function(response){
+      $("#race-result").empty();
+      for (var i = 0; i < response.length; i++) {
+        // let output = response[i].name;
+        let id = response[i].id;
+        $("#race-result").append(`<p><a href="http://strainapi.evanbusse.com/${strainApiKey}/strains/data/desc/${id}">${response[i].name}</a></p>`);
+      }
+    }).fail(function(error){
+      $("#race-result").empty();
+      $("#race-result").append("<h3>No results found, man</h3>");
     });
   });
 });
