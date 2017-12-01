@@ -19,7 +19,9 @@ body {
   width: 100%;
   border-bottom: 1px solid #420;
   background-color: lightgreen;
-  padding: 20px; }
+  padding: 20px;
+  background-image: url("./../img/tile-pattern2.jpg");
+  background-size: contain; }
 
 .main-inner {
   display: flex;
@@ -47,7 +49,6 @@ button {
   font-family: sans-serif;
   font-weight: 300;
   padding: 5px;
-  transform: translate(10px, -20px);
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid #420;
@@ -68,6 +69,9 @@ input[type="radio"] {
 
 .search-text {
   padding-left: 10px;
+  padding-right: 10px;
+  text-shadow: 1px 1px 5px white;
+  border-radius: 5px;
   font-weight: 600;
   font-size: 18px;
   color: darkgreen; }
@@ -76,7 +80,8 @@ input[type="radio"] {
   margin-bottom: 10px;
   border-radius: 5px;
   padding: 10px;
-  height: 120px; }
+  height: 100px;
+  background: lightgreen; }
 
 #last-col {
   display: flex;
